@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" fx:id="seleniumScriptPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="27.0" minWidth="-1.0" pickOnBounds="true" prefHeight="27.0" prefWidth="103.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bsm.profile.script.SeleniumScriptStepController">
+  <children>
+    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="103.0" text="Add Step" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+  </children>
+</AnchorPane>

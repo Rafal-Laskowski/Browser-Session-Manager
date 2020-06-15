@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" fx:id="selectProfileAnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" pickOnBounds="true" prefHeight="190.0" prefWidth="230.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bsm.profile.CreateNewProfileButtonController">
+  <children>
+    <Button contentDisplay="CENTER" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#openProfileCreationDialog" prefHeight="190.0" prefWidth="230.0" style="-fx-background-color: #000000" text="Create new profile" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+        <Font size="25.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>

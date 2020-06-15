@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" fx:id="seleniumScriptPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="40.0" minWidth="-1.0" pickOnBounds="true" prefHeight="219.0" prefWidth="633.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bsm.profile.script.SeleniumScriptStepController">
+  <children>
+    <TitledPane fx:id="scriptStepTitledPane" animated="false" cache="false" collapsible="true" disable="false" expanded="true" focusTraversable="true" layoutX="0.0" layoutY="0.0" pickOnBounds="true" prefHeight="219.0" prefWidth="633.0" text="Step #1" textAlignment="LEFT">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <BorderPane prefHeight="8.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <center>
+                <VBox prefHeight="190.0" prefWidth="742.0">
+                  <children>
+                    <HBox prefHeight="48.0" prefWidth="742.0">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="125.0" text="findElement(By)">
+                          <HBox.margin>
+                            <Insets bottom="10.0" left="10.0" top="10.0" />
+                          </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="byComboBox" prefHeight="26.0" prefWidth="200.0">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                          <HBox.margin>
+                            <Insets bottom="10.0" left="5.0" top="10.0" fx:id="x1" />
+                          </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="selectorTextField" prefHeight="31.0" prefWidth="200.0" text="selector" HBox.margin="$x1" />
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="48.0" prefWidth="742.0">
+                      <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" text="Action:">
+                          <HBox.margin>
+                            <Insets bottom="10.0" left="15.0" top="10.0" fx:id="x2" />
+                          </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="actionComboBox" onAction="#showOrHideSendKeysTextField" prefHeight="26.0" prefWidth="200.0" HBox.margin="$x1">
+                          <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Item 1" />
+                              <String fx:value="Item 2" />
+                              <String fx:value="Item 3" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#delete" text="Delete Step">
+                          <HBox.margin>
+                            <Insets bottom="10.0" left="150.0" right="10.0" top="10.0" />
+                          </HBox.margin>
+                        </Button>
+                      </children>
+                    </HBox>
+                    <HBox prefHeight="47.0" prefWidth="742.0">
+                      <children>
+                        <Label fx:id="textToEnterLbl" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" text="Text to enter:" HBox.margin="$x2" />
+                        <TextField fx:id="textToEnterTextField" prefHeight="25.0" prefWidth="200.0">
+                          <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" top="10.0" />
+                          </HBox.margin>
+                        </TextField>
+                      </children>
+                    </HBox>
+                    <HBox minHeight="42.0" prefHeight="42.0" prefWidth="742.0" />
+                  </children>
+                </VBox>
+              </center>
+            </BorderPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

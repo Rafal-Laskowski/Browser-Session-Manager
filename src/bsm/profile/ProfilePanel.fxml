@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" fx:id="createNewProfileAnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" pickOnBounds="true" prefHeight="648.0" prefWidth="680.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bsm.profile.ProfileController">
+  <children>
+    <VBox prefHeight="489.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <TabPane prefHeight="618.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="Basic">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="580.0">
+                  <children>
+                    <BorderPane prefHeight="352.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                      <center>
+                        <VBox minWidth="527.0" prefHeight="350.0" prefWidth="675.0">
+                          <children>
+                            <TitledPane animated="false" collapsible="false" prefHeight="100.0" prefWidth="680.0" text="Name">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="675.0">
+                                  <children>
+                                    <HBox prefHeight="67.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                        <TextField fx:id="nameTextField" alignment="CENTER" prefHeight="27.0" prefWidth="675.0" style="-fx-font-size: 15pt;" HBox.hgrow="NEVER">
+                                          <HBox.margin>
+                                            <Insets />
+                                          </HBox.margin>
+                                        </TextField>
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" collapsible="false" prefHeight="82.0" prefWidth="683.0" text="Language">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="675.0">
+                                  <children>
+                                    <HBox prefHeight="116.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                        <RadioButton id="english" fx:id="englishRadio" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="English" textAlignment="CENTER" wrapText="true">
+                                          <font>
+                                            <Font size="20.0" fx:id="x1" />
+                                          </font>
+                                          <toggleGroup>
+                                            <ToggleGroup fx:id="languageGroup" />
+                                          </toggleGroup>
+                                          <HBox.margin>
+                                            <Insets left="10.0" right="10.0" fx:id="x2" />
+                                          </HBox.margin>
+                                        </RadioButton>
+                                        <RadioButton id="polish" fx:id="polishRadio" alignment="CENTER" contentDisplay="CENTER" font="$x1" mnemonicParsing="false" text="Polish" textAlignment="CENTER" toggleGroup="$languageGroup" wrapText="true" />
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" collapsible="false" prefHeight="82.0" prefWidth="683.0" text="Window Size">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="675.0">
+                                  <children>
+                                    <HBox prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                        <RadioButton id="english" fx:id="defaultSize" alignment="CENTER" contentDisplay="CENTER" font="$x1" mnemonicParsing="false" onAction="#handleCustomWindowSizePane" selected="true" text="Default" textAlignment="CENTER" wrapText="true">
+                                          <toggleGroup>
+                                            <ToggleGroup fx:id="customWindowSizeGroup" />
+                                          </toggleGroup>
+                                          <HBox.margin>
+                                            <Insets left="10.0" right="10.0" fx:id="x2" />
+                                          </HBox.margin>
+                                        </RadioButton>
+                                        <RadioButton id="polish" fx:id="maximized" alignment="CENTER" contentDisplay="CENTER" font="$x1" mnemonicParsing="false" onAction="#handleCustomWindowSizePane" text="Maximized" textAlignment="CENTER" toggleGroup="$customWindowSizeGroup" wrapText="true" HBox.margin="$x2" />
+                                        <RadioButton id="polish" fx:id="sized" alignment="CENTER" contentDisplay="CENTER" font="$x1" mnemonicParsing="false" onAction="#handleCustomWindowSizePane" text="Custom Size" textAlignment="CENTER" toggleGroup="$customWindowSizeGroup" wrapText="true" HBox.margin="$x2" />
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane fx:id="customWindowSizePane" animated="false" collapsible="false" prefHeight="82.0" prefWidth="680.0" text="Custom Window Size">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="675.0">
+                                  <children>
+                                    <HBox prefHeight="116.0" prefWidth="675.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                        <Label font="$x1" text="Width" />
+                                        <TextField fx:id="widthTextField" prefWidth="200.0" style="&#10;" text="800" />
+                                        <Label font="$x1" text="Height">
+                                          <HBox.margin>
+                                            <Insets left="25.0" right="10.0" />
+                                          </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="heightTextField" prefWidth="200.0" style="" text="600" />
+                                      </children>
+                                    </HBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </children>
+                        </VBox>
+                      </center>
+                    </BorderPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Selenium Script">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <VBox layoutX="0.0" layoutY="0.0" prefHeight="570.0" prefWidth="680.0">
+                      <children>
+                        <ScrollPane fitToHeight="false" fitToWidth="true" prefHeight="502.0" prefWidth="680.0">
+                          <content>
+                            <Accordion id="se" fx:id="seleniumSteps" expandedPane="$null" />
+                          </content>
+                        </ScrollPane>
+                        <BorderPane fx:id="addStepBorderPane" prefHeight="37.0" prefWidth="680.0">
+                          <right>
+                            <Button mnemonicParsing="false" onAction="#addStep" text="Add Step">
+                              <BorderPane.margin>
+                                <Insets right="10.0" />
+                              </BorderPane.margin>
+                            </Button>
+                          </right>
+                        </BorderPane>
+                      </children>
+                    </VBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Proxy">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <BorderPane prefHeight="570.0" prefWidth="680.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                            <HBox prefHeight="46.0" prefWidth="680.0" />
+                            <HBox prefHeight="51.0" prefWidth="680.0">
+                              <children>
+                                <Label text="URL">
+                                  <HBox.margin>
+                                    <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" fx:id="x3" />
+                                  </HBox.margin>
+                                </Label>
+                                <TextField fx:id="proxyUrl" prefWidth="200.0">
+                                  <HBox.margin>
+                                    <Insets bottom="10.0" right="30.0" top="10.0" fx:id="x4" />
+                                  </HBox.margin>
+                                </TextField>
+                              </children>
+                            </HBox>
+                            <HBox prefHeight="48.0" prefWidth="680.0">
+                              <children>
+                                <Label text="Port" HBox.margin="$x3" />
+                                <TextField fx:id="proxyPort" prefWidth="200.0" HBox.margin="$x4" />
+                              </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0" />
+                          </children>
+                        </VBox>
+                      </center>
+                    </BorderPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+        <HBox prefHeight="34.999900000002526" prefWidth="680.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="124.0" text="Cancel">
+              <HBox.margin>
+                <Insets bottom="10.0" left="30.0" right="10.0" />
+              </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#saveProfile" prefWidth="546.0" text="Save">
+              <HBox.margin>
+                <Insets right="30.0" />
+              </HBox.margin>
+            </Button>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
